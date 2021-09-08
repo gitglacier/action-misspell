@@ -37,6 +37,7 @@ runs:
   using: composite
   steps:
     - run: |
+        export COMPOSITE_ROOT="$PWD";
         # The inputs must be MANUALLY SETUP for composite types, Ensure this is kept up to date.
         export INPUT_GITHUB_TOKEN="${{ inputs.github_token }}";
         export INPUT_LOCALE="${{ inputs.locale }}";
