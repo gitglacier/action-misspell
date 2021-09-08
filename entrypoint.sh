@@ -7,7 +7,7 @@ export REVIEWDOG_GITHUB_API_TOKEN="${INPUT_GITHUB_TOKEN}"
 paths=()
 while read -r pattern; do
     [[ -n ${pattern} ]] && paths+=("${pattern}")
-done <<< "${INPUT_PATH:-.}"
+done <<< "$(git diff --name-only origin/master)";
 
 names=()
 if [[ "${INPUT_PATTERN:-*}" != '*' ]]; then
