@@ -39,15 +39,15 @@ runs:
     - run: |
         # The inputs must be MANUALLY SETUP for composite types, Ensure this is kept up to date.
         export INPUT_GITHUB_TOKEN="${{ inputs.github_token }}";
-	export INPUT_LOCALE="${{ inputs.locale }}";
-	export INPUT_LEVEL="${{ inputs.level }}";
-	export INPUT_REPORTER="${{ inputs.reporter }}";
-	export INPUT_IGNORE="${{ inputs.ignore }}";
-	export INPUT_PATH="${{ inputs.path }}";
-	export INPUT_PATTERN="${{ inputs.pattern }}";
-	export INPUT_EXCLUDE="${{ inputs.exclude }}";
-	export INPUT_FILTER_MODE="${{ inputs.filter_mode }}";
-	export INPUT_FAIL_ON_ERROR="${{ inputs.fail_on_error }}";
+        export INPUT_LOCALE="${{ inputs.locale }}";
+        export INPUT_LEVEL="${{ inputs.level }}";
+        export INPUT_REPORTER="${{ inputs.reporter }}";
+        export INPUT_IGNORE="${{ inputs.ignore }}";
+        export INPUT_PATH="${{ inputs.path }}";
+        export INPUT_PATTERN="${{ inputs.pattern }}";
+        export INPUT_EXCLUDE="${{ inputs.exclude }}";
+        export INPUT_FILTER_MODE="${{ inputs.filter_mode }}";
+        export INPUT_FAIL_ON_ERROR="${{ inputs.fail_on_error }}";
 
         FILEPATH="${{ github.action_path }}/entrypoint.sh"
         if [ -f "$FILEPATH" ]; then
